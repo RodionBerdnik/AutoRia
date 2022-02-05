@@ -6,4 +6,10 @@ const carsList = document.getElementById('carsList')
 function renderCars(cars, carsList) {
     carsList.innerHTML = cars.map(car => `<p>${car.make}</p>`).join('')
 }
-renderCars(CARS, carsList)
+// renderCars(CARS, carsList)
+
+//* Должна быть функция для подсчета количества предложений
+function elements__suggestions(total, hour, day){
+
+}
+elements__suggestions()

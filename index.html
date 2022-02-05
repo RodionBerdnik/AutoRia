@@ -1,33 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" href="./css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <meta charset="UTF-8"  />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preload" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" as="style"
+    integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"
+    onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript>
+    <link rel="stylesheet" href="./css/style.css">
+    </noscript>
     <title>AutoRia</title>
     <script defer src="./js/cars.js"></script>
     <script defer src="./js/app.js"></script>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div class="search">search</div>
+    <header class="header container">
+        <div class="header__elements">
+            <h1 class="elements__text">Пошук вживаних авто в Україні</h1>
+            <ul type="disc" class="elements__suggestions">
+                <li>177 119 пропозицій</li>
+                <li> за годину <a>+ 973</a></li>
+                <li> за день <a>+ 6 056</a></li>
+            </ul>
         </div>
     </header>
-    <main>
-        <div class="container">
-            <div class="filter-bar">filter</div>
-            <div class="feed">
-                <div class="top-bar">sort and masonry</div>
-                <div id="carsList">
-                    <div class="car">
-                        <img src="" alt="">
-                        <h2>BMW M3 1.4L 2010</h2>
-                        <h3></h3>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </main>
 </body>
 </html>
