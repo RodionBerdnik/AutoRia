@@ -242,9 +242,45 @@
     border: 2px solid black;
   }
   .filter-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     padding: 20px;
     position: sticky;
     top: 20px;
+  }
+  .filter-buttons{
+    width: 220px;
+    margin-bottom: 30px;
+  }
+  .filter-buttons button{
+    background-color: white;
+    color: rgb(37, 131, 255);
+    border: 1px solid rgb(186, 186, 186);
+    padding: 4px 10px;
+    margin: 0 8px 10px 0;
+    font-size: 16px;
+    font-weight: 500;
+  }
+  .filter-buttons button:hover{
+    border: 1px solid blue;
+  }
+  .filter-form h4{
+    color: #db5c4c;
+    font-weight: 700;
+    margin-bottom: 5px;
+  }
+  .filter-form label{
+    display: flex;
+    gap: 5px;
+  }
+  .form-vin-text{
+    background-color: #246799;
+    color: white;
+    width: 170px;
+    border-radius: 2px;
+    font-size: 13px;
+    padding: 0 8px;
   }
   /*====================FILTER END=======================*/
 
