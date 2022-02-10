@@ -27,7 +27,21 @@ function createCarTemplate(car) {
         <i class="fa-solid fa-car-mirrors"></i>
         ${car.vin ? car.vin : 'VIN не вказано'}
         </div>
-        
+        <dl class="consume">
+        <h3>Витрата палива: </h3>
+            <div class="consume_meaning">
+                <dt>City:<dt>
+                <dd>${car.consume?.city ?? 'Не вказано'}<dd>
+            </div>
+            <div class="consume_meaning">
+                <dt>Mixed:<dt>
+                <dd>${car.consume?.mixed ?? 'Не вказано'}<dd>
+            </div>
+            <div class="consume_meaning">
+                <dt>Road:<dt>
+                <dd>${car.consume?.road ?? 'Не вказано'}<dd>
+            </div>
+        </dl>
     </div>
 </div>`;
 }
