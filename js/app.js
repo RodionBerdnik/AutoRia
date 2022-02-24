@@ -3,13 +3,29 @@ console.log(CARS); //array of objects with car data
 const USDrate = 28.12;
 const carsList = document.getElementById('carsList');
 const searchForm = document.getElementById('searchForm');
+const sortingSelect = document.getElementById('sortingSelect');
+
+
+sortingSelect.addEventListener('change', (event)=>{
+    const value = event.target.value.split('/')
+    const [key, order] = value
+    CARS.sort((carA, carB) =>{
+        return String(carA[key]).localeCompare(String(carB[key]), undefined, {numeric: true}) * order
+    });
+    renderCars(CARS, carsList);
+})
 
 
 searchForm.addEventListener('submit', (event) => {
     event.preventDefault()
-    const searchQuery = event.target.search.value.toLowerCase()
+    const searchQuery = event.target.search.value.trim().replaceAll(/[\s{2,}]/g, ' ').toLowerCase().split(' ')
     console.log(searchQuery);
-    const foundCars = CARS.filter((car) => car.make.toLowerCase().includes(searchQuery))
+    const foundCars = CARS.filter((car) => {
+        return searchQuery.every((word)=> {
+            return `${car.make} ${car.model} ${car.year}`.toLowerCase().includes(word)
+        }
+        )
+    });
     renderCars(foundCars, carsList);
 })
 
@@ -105,3 +121,70 @@ renderCars(CARS, carsList);
 //     vin?: string,
 //     phone?: string | number,
 // }
+
+
+// const words = ['яблоко','лес','ежик']
+// words.sort((a,b)=>{
+//     return String(a).localeCompare(String(b), undefined, {numeric: true})
+// })
+// console.log(words);
+
+// const number = [5,10,8,39,12,3]
+// number.sort((a,b)=>{
+//     return String(a).localeCompare(String(b), undefined, {numeric: true})
+// })
+// console.log(number);
+
+// function handleClick(event) {
+//     console.log(event);
+//     if (event.timeStamp > 10000) {
+//         console.log("Listener removed!");
+//         clickBtn.removeEventListener('click', handleClick)
+//     }
+// }
+
+// clickBtn.addEventListener('click', handleClick)
+
+
+// carsList.addEventListener('click', event => {
+//     const fuelEl = event.target.closest('.fuel')
+//     if (fuelEl) {
+//         console.log(fuelEl);
+//     }
+// })
+
+
+// document.addEventListener('click', e => {
+//     console.log('Click on document');
+    
+// })
+
+// btn60.addEventListener('click', e => {
+//     console.log('Click1 on btn60');
+// })
+// btn60.addEventListener('click', e => {
+//     console.log('Click2 on btn60');
+//     e.stopImmediatePropagation()
+// })
+// btn60.addEventListener('click', e => {
+//     console.log('Click3 on btn60');
+// })
+
+// searchForm.addEventListener('submit', e => {
+//     e.preventDefault()
+//     console.log('Form sended!');
+// })
+
+
+const [a,,c] = [1,2,3]
+
+const user = {
+    name: 'Ivan',
+    age: 25,
+}
+const {age, name} = user
+
+let x = 5;
+let y = 10;
+
+ [y,x] = [x,y]

@@ -3,14 +3,14 @@
 
     <head>
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="preload" href="./css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <link rel="preload" href="../AutoRia/css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="preload" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" as="style"
             integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous"
             onload="this.onload=null;this.rel='stylesheet'" />
         <noscript>
-            <link rel="stylesheet" href="./css/style.css">
+            <link rel="stylesheet" href="../AutoRia/css/style.css">
         </noscript>
         <title>AutoRia</title>
         <script defer src="./js/cars.js"></script>
@@ -54,10 +54,14 @@
                     <div class="sort-options">
                         <!-- <h3>Сортування: Звичайне <i class="fas fa-sort-down"></i></h3> -->
                         <select name="sorting" id="sortingSelect">
-                            <option value="">Price (from min to max)</option>
-                            <option value="">Price (from max to min)</option>
-                            <option value="">Year (from new to old)</option>
-                            <option value="">Year (from old to new)</option>
+                            <option value="price/1">Price (from min to max)</option>
+                            <option value="price/-1">Price (from max to min)</option>
+                            <option value="year/-1">Year (from new to old)</option>
+                            <option value="year/1">Year (from old to new)</option>
+                            <option value="rating/-1">Rating (from max to min)</option>
+                            <option value="rating/1">Rating (from min to max)</option>
+                            <option value="vip/-1">VIP-оголошення</option>
+                            <option value="top/-1">TOP-оголошення</option>
                         </select>
                         <!-- <h3>Період подачі: Усі <i class="fas fa-sort-down"></i></h3> -->
                     </div>
